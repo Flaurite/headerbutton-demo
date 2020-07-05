@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://baseScreen.caption"
+        messagesPack="com.company.hbdemo.web.screens.tests">
+    <layout expand="spacer" spacing="true" width="600px">
+        <hbox id="xmlDefinitionBox" width="100%">
+            <label value="Icon, caption, description" align="MIDDLE_LEFT"/>
+            <button id="xmlDefinitionBtn" caption="Show dialog" align="MIDDLE_RIGHT"/>
+        </hbox>
+        <hbox id="clickEventBox" width="100%">
+            <label value="Header button click" align="MIDDLE_LEFT"/>
+            <button id="clickEventBtn" caption="Show dialog" align="MIDDLE_RIGHT"/>
+        </hbox>
+        <hbox id="runtimeChangesBox" width="100%">
+            <label value="Changing header button properties, adding, removing buttons at runtime" align="MIDDLE_LEFT"/>
+            <button id="runtimeChangesBtn" caption="Show dialog" align="MIDDLE_RIGHT"/>
+        </hbox>
+        <label id="spacer"/>
+    </layout>
+</window>

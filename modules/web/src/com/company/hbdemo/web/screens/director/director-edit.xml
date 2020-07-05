@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://directorEdit.caption"
+        focusComponent="form"
+        messagesPack="com.company.hbdemo.web.screens.director">
+    <data>
+        <instance id="directorDc"
+                  class="com.company.hbdemo.entity.Director">
+            <view extends="_local">
+                <property name="movies" view="_minimal">
+                    <property name="year"/>
+                    <property name="budget"/>
+                    <property name="time"/>
+                    <property name="country" view="_minimal"/>
+                    <property name="genres" view="_minimal"/>
+                </property>
+            </view>
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="directorDc">
+            <column width="350px">
+                <textField id="firstNameField" property="firstName"/>
+                <textField id="lastNameField" property="lastName"/>
+                <textField id="ageField" property="age"/>
+                <textField id="growthField" property="growth"/>
+                <dateField id="birthDateField" property="birthDate"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

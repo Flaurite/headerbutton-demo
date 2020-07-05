@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:hb="http://schemas.headerbutton/headerbutton/0.1/headerbutton.xsd"
+        caption="msg://xmlDefinitionScreen.caption"
+        messagesPack="com.company.hbdemo.web.screens.tests">
+    <dialogMode width="700px">
+
+    </dialogMode>
+    <facets>
+        <hb:headerButtons id="headerButtons">
+            <hb:button id="captionBtn" caption="Only caption"/>
+            <hb:button id="iconBtn" icon="NAVICON"/>
+            <hb:button id="descriptionBtn" icon="ARCHIVE"
+                       caption="desc"
+                       description="msg://xmlDefinitionScreen.descriptionBtn.description"/>
+            <hb:button id="descriptionHtmlBtn"
+                       icon="ARCHIVE"
+                       caption="desc HTML"
+                       descriptionAsHtml="true"
+                       description="msg://xmlDefinitionScreen.descriptionBtn.descriptionHtml"/>
+            <hb:button id="disabledBtn"
+                       icon="LOCK"
+                       caption="Disabled button"
+                       enabled="false"/>
+        </hb:headerButtons>
+    </facets>
+    <layout>
+        <label id="label" value="Screen layout" stylename="h1"/>
+    </layout>
+</window>

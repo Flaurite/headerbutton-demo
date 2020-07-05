@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
+    <menu id="application-hbdemo" insertBefore="administration">
+        <item screen="hbdemo_Director.browse" caption="mainMsg://menu_config.hbdemo_Director.browse"/>
+        <item screen="hbdemo_Country.browse" caption="mainMsg://menu_config.hbdemo_Country.browse"/>
+        <item screen="hbdemo_Genre.browse" caption="mainMsg://menu_config.hbdemo_Genre.browse"/>
+        <item screen="hbdemo_Movie.browse" caption="mainMsg://menu_config.hbdemo_Movie.browse"/>
+    </menu>
+    <menu id="test-examples" insertBefore="administration">
+        <item screen="hbdemo_BaseScreen" caption="mainMsg://menu_config.hbdemo_BaseScreen"/>
+    </menu>
+</menu-config>

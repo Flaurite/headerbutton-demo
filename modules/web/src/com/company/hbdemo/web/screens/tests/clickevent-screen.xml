@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:hb="http://schemas.headerbutton/headerbutton/0.1/headerbutton.xsd"
+        caption="msg://clickeventScreen.caption"
+        messagesPack="com.company.hbdemo.web.screens.tests">
+    <facets>
+        <hb:headerButtons id="headerButtons">
+            <hb:button id="captionBtn" caption="Only caption"/>
+            <hb:button id="iconBtn" icon="NAVICON"/>
+        </hb:headerButtons>
+    </facets>
+    <layout>
+        <label id="label" value="Screen layout" stylename="h1"/>
+    </layout>
+</window>

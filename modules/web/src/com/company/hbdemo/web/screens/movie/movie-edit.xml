@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:hb="http://schemas.headerbutton/headerbutton/0.1/headerbutton.xsd"
+        caption="msg://movieEdit.caption"
+        focusComponent="form"
+        messagesPack="com.company.hbdemo.web.screens.movie">
+    <data>
+        <instance id="movieDc"
+                  class="com.company.hbdemo.entity.Movie">
+            <view extends="movie-full"/>
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="350"
+                width="500"/>
+    <facets>
+        <hb:headerButtons id="headerButtons">
+            <hb:button id="infoBtn" icon="font-icon:INFO"/>
+        </hb:headerButtons>
+    </facets>
+    <layout expand="spacer" spacing="true">
+        <form id="form" dataContainer="movieDc" width="100%">
+            <column width="100%">
+                <textField id="nameField" property="name"/>
+                <textField id="yearField" property="year"/>
+                <textField id="budgetField" property="budget"/>
+                <textField id="timeField" property="time"/>
+                <pickerField id="directorField" property="director"/>
+                <pickerField id="countryField" property="country"/>
+            </column>
+        </form>
+        <label id="spacer"/>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

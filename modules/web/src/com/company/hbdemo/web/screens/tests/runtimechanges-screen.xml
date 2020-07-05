@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:hb="http://schemas.headerbutton/headerbutton/0.1/headerbutton.xsd"
+        caption="msg://runtimeChangesScreen.caption"
+        messagesPack="com.company.hbdemo.web.screens.tests">
+    <facets>
+        <hb:headerButtons id="headerButtons">
+            <hb:button id="captionBtn" caption="Only caption"/>
+            <hb:button id="iconBtn" icon="NAVICON"/>
+        </hb:headerButtons>
+    </facets>
+    <layout spacing="true">
+        <button id="addBtn" caption="Add header button"/>
+        <button id="removeBtn" caption="Remove header button"/>
+    </layout>
+</window>

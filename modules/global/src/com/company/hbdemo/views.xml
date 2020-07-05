@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
+
+    <view entity="hbdemo_Movie" name="movie-full" extends="_local">
+        <property name="director" view="_minimal">
+            <property name="lastName"/>
+            <property name="age"/>
+            <property name="growth"/>
+            <property name="birthDate"/>
+        </property>
+        <property name="country" view="_minimal"/>
+        <property name="genres" view="_minimal"/>
+    </view>
+    <view entity="hbdemo_Genre" name="genre-full" extends="_local">
+        <property name="movies" view="_minimal">
+            <property name="year"/>
+            <property name="budget"/>
+            <property name="time"/>
+            <property name="director" view="_minimal">
+                <property name="lastName"/>
+                <property name="age"/>
+                <property name="growth"/>
+                <property name="birthDate"/>
+            </property>
+            <property name="country" view="_minimal"/>
+            <property name="genres" view="_minimal"/>
+        </property>
+    </view>
+    <view entity="hbdemo_Director" name="director-full" extends="_local">
+        <property name="movies" view="_minimal">
+            <property name="year"/>
+            <property name="budget"/>
+            <property name="time"/>
+            <property name="country" view="_minimal"/>
+            <property name="genres" view="_minimal"/>
+        </property>
+    </view>
+    <view entity="hbdemo_Country" name="country-full" extends="_local">
+        <property name="movies" view="_minimal">
+            <property name="year"/>
+            <property name="budget"/>
+            <property name="time"/>
+            <property name="director" view="_minimal"/>
+            <property name="genres" view="_minimal"/>
+        </property>
+    </view>
+</views>

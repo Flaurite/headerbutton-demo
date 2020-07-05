@@ -1,0 +1,10 @@
+-- begin HBDEMO_MOVIE
+alter table HBDEMO_MOVIE add constraint FK_HBDEMO_MOVIE_ON_DIRECTOR foreign key (DIRECTOR_ID) references HBDEMO_DIRECTOR(ID)^
+alter table HBDEMO_MOVIE add constraint FK_HBDEMO_MOVIE_ON_COUNTRY foreign key (COUNTRY_ID) references HBDEMO_COUNTRY(ID)^
+create index IDX_HBDEMO_MOVIE_ON_DIRECTOR on HBDEMO_MOVIE (DIRECTOR_ID)^
+create index IDX_HBDEMO_MOVIE_ON_COUNTRY on HBDEMO_MOVIE (COUNTRY_ID)^
+-- end HBDEMO_MOVIE
+-- begin HBDEMO_GENRE_MOVIE_LINK
+alter table HBDEMO_GENRE_MOVIE_LINK add constraint FK_GENMOV_ON_MOVIE foreign key (MOVIE_ID) references HBDEMO_MOVIE(ID)^
+alter table HBDEMO_GENRE_MOVIE_LINK add constraint FK_GENMOV_ON_GENRE foreign key (GENRE_ID) references HBDEMO_GENRE(ID)^
+-- end HBDEMO_GENRE_MOVIE_LINK
